@@ -14,7 +14,10 @@ export default [
   {
     languageOptions: {
       ecmaVersion: 2020,
-      globals: { ...globals.browser, ...globals.node },
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
     },
   },
   pluginJs.configs.recommended,
