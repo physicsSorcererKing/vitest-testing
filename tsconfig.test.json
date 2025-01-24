@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "types": ["vitest/globals"],
+    "types": ["vitest/globals", "jest"],
+    "jsx": "react-jsx",
 
     "target": "ES2022",
     "lib": ["ES2023"],
@@ -18,7 +19,13 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* Path Alias */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
-  "include": ["/**/*.js", "/**/*.ts", "/**/*.mts", "/**/*.tsx"]
+  "include": ["src/**/*.{test,spec}.{js,jsx,ts,tsx}"]
 }
